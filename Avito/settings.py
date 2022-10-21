@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     # flatpages
     'django.contrib.sites',
     'django.contrib.flatpages',
+    #ckeditor for fixing field issues in flatpages
+    'ckeditor',
 ]
 #required when setting up flatpages
 SITE_ID = 1
