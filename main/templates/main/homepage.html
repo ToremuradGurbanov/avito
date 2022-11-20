@@ -1,29 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <title>Online-Market</title>
-  </head>
-  <body>
-    <h2>START</h2>
-    {% load flatpages %} {% get_flatpages as flatpages %}
-    <ul>
-      {% for page in flatpages %}
-      <li style="list-style-type: None">
-        <a href="{{ page.url }}">{{ page.title }}</a>
-      </li>
-      {% endfor %}
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"
-      ></script>
-    </ul>
-  </body>
-</html>
+{% extends 'main/base.html' %} {% load flatpages %} {% block navs %}
+<span></span>
+{%get_flatpages as flatpages %}{% for page in flatpages %}
+<li class="nav-item">
+  <a class="nav-link" href="{{ page.url }}">{{ page.title }}</a>
+</li>
+{% endfor %} {% endblock navs %} {% block content %} {% endblock %}
